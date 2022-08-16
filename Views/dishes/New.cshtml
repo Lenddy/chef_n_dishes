@@ -1,0 +1,59 @@
+@model Dish
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/">Home</a>
+    <form action="/dish/create" method="post">
+        <div>
+            <label asp-for="Name"></label>
+            <span asp-validation-for="Name" ></span>
+        </div>
+        <input type="text" asp-for="Name" id="">
+
+        <div>
+            @*! not working *@
+            <label asp-for="cook"></label>
+            <select asp-for="chefId" id="">
+                <option value="">Select</option>
+                @foreach (Chef item in ViewBag.allChef)
+                {
+                    <option value="@item.chefId">@item.f_name @item.l_name</option>
+                }
+            </select>
+        </div>
+        <div>
+            <label asp-for="Calories"></label>
+            <span asp-validation-for="Calories" ></span>
+        </div>
+        <input type="text" asp-for="Calories" id="">
+        <div>
+            <label asp-for="Tastiness"></label>
+            <span asp-validation-for="Tastiness" ></span>
+        </div>
+        <select asp-for="Tastiness" id="">
+            <option value="">Select</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <div>
+            <label asp-for="Description"></label>
+            <span asp-validation-for="Description" ></span>
+        </div>
+        <input type="text" asp-for="Description" id="">
+        <div>
+            <button>create Dish</button>
+        </div>
+
+    </form>
+    
+</body>
+</html>

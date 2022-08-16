@@ -1,0 +1,103 @@
+@model Chef
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>New chef</h1>
+<a href="/chef/all"><button>home</button></a>
+<form action="/chef/create" method="post">
+    <div>
+        <label asp-for="f_name"></label>
+        <input type="text" asp-for="f_name" id="">
+        <span asp-validation-for="f_name" ></span>
+    </div>
+
+    <div>
+        <label asp-for="l_name"></label>
+        <input type="text" asp-for="l_name" id="">
+        <span asp-validation-for="l_name" ></span>
+    </div>
+    <div>
+        <label asp-for="dob"></label>
+        <input type="date" asp-for="dob" id="">
+        <span asp-validation-for="dob" ></span>
+    </div>
+    <button>Add New chef</button>
+</form>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* 1@model Chef
+
+    <div class="containerw-75 mx-auto>
+        <h2 class="text-center">AddaChef</h2>
+        <a href="/"><button>Home</button></a>
+        <form asp-controller="Chef"asp-action="All"><button>Home</button></form>*<(
+        <form class="shadowp-3rounded"asp-controller="Chef"asp-action="Create"method=
+                <div class="mb-3">
+    </div>
+                    <label asp-for="FirstName"></label>
+                    <span asp-validation-for="FirstName"></span>
+                    <input id="name"type="text"asp-for="FirstName">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="LastName"></label>
+                    <span asp-validation-for="LastName"></span>
+                    <input id="name"type="text"asp-for="LastName">
+                </div>
+                <div class="mb-3">
+        </form>
+                    <label asp-for="DOB"></label>
+                    <span asp-validation-for="DOB"></span>
+                    <input id="name"type="Date"asp-for="DOB">
+                </div>
+                <button type="submit">Add Chef</button>
+                                                                                           @this will displaye
+                                                                                          @*this will display er
+                                                                                   @*this will display error me *@

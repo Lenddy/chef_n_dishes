@@ -1,0 +1,25 @@
+﻿@model List<Dish>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><a href="chef/all">Chefs</a>| Dishes</h1>
+        <h1>yum, take a look at our tasty dishes</h1>    
+        <a href="/dish/new"> Add dish</a>
+    
+    @* * add the view one later *@
+    @foreach (var item in ViewBag.allDishes){
+        @* * we can chage the name of out url  because this is calling the controller then the name of the funtion then adding the DishId  
+        altho i perfer the normal a tag*@
+        <h6>  @item.DishId  @item.Name  created by @item.cook.f_name </h6> 
+
+
+    }
+    
+</body>
+</html> 

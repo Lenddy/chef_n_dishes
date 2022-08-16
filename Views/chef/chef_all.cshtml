@@ -1,0 +1,30 @@
+@model List<Chef>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Chefs|<a href="/">Dishes</a></h1>
+        <a href="/chef/new">add chef</a>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>number dishes</th>
+            </tr>
+            @foreach (Chef item in Model)
+            {
+            <tr>
+                <th>@item.f_name @item.l_name</th>
+                <th>@Chef.CalculateAge(item.dob)</th>
+                <th></th>
+            </tr>
+            }
+        </table>
+        
+    </body>
+    </html>
